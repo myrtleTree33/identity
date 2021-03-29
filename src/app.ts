@@ -8,13 +8,13 @@ const runApp = (): any => {
 
   // Middleware
   app.use(express.json());
-  app.use(applyErrorHandler());
-  app.use(apply404Handler());
 
   // Routes
   app.use('/', baseRoutes);
-  // app.use('/user', userRoutes);
-  // app.use('/outlet', outletRoutes);
+
+  // Error handlers
+  app.use(applyErrorHandler());
+  app.use(apply404Handler());
 
   return app;
 };
