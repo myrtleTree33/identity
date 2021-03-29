@@ -3,7 +3,7 @@ import { apply404Handler, applyErrorHandler } from './middleware/errorHandler';
 
 import baseRoutes from './routes/baseRoutes';
 
-const runApp = (): any => {
+const runApp = (db: any): any => {
   const app = express();
 
   // Middleware
