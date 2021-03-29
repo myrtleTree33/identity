@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node ./dist/index.js",
+    "start": "npm run build && cp .env ./dist/.env && node ./dist/index.js",
     "build": "rimraf ./test && tsc",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -25,6 +25,9 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.6.2"
   }
 }

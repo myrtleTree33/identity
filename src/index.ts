@@ -4,9 +4,12 @@ import runApp from './app';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const { PORT = 8080 } = process.env;
+const { PORT = 8080, POSTGRES_DB_URI } = process.env;
 
-const app = runApp();
+import db from './db';
+
+const app = runApp(db);
+
 app.listen(PORT, () =>
   console.log(`Server started; Listening on port ${PORT}`),
 );
