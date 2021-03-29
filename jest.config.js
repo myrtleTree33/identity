@@ -1,6 +1,6 @@
 module.exports = {
-  preset: "ts-jest",
-  testEnvironment: "node",
+  preset: 'ts-jest',
+  testEnvironment: 'node',
   collectCoverage: true,
-  testRegex: "./test/.*.test.ts",
+  testRegex: './test/.*.test.ts',
 };
